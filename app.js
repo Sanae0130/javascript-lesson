@@ -6,14 +6,10 @@ let profile = '私のニックネームは' + nickname + 'です。' + '年齢�
 console.log(profile);
 
 // --Q2--
-let languages = 'JavaScript';
-let languagesText = '私が好きな言語は' + languages + 'です。';
-languages = 'PHP';
-languages = 'Ruby';
-languages = 'Python';
+let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+let languagesText = '私が好きな言語は' + languages[0] + 'です。';
 let Clanguages = `${languagesText}
-次は${languages}を勉強してみたいです。`;
-languages = 'Go';
+次は${languages[3]}を勉強してみたいです。`;
 
 console.log(Clanguages);
 
@@ -70,7 +66,7 @@ sayworld();
 //--Q7--
 
 user.birthday = '2000-09-27';
-user.sayHello = function (){
+user.sayHello = function () {
   console.log('Hello');
 }
 user.sayHello();
@@ -79,37 +75,33 @@ user.sayHello();
 
 let calc = {};
 
-calc.add = function tasu(X1,Y1) {
- let wa = X1 + Y1;
- console.log(wa);
+calc.add = function tasu(X1, Y1) {
+ console.log(X1 + Y1);
 }
-calc.subtract = function hiku(X2,Y2) {
- let sa = X2 - Y2;
- console.log(sa);
+calc.subtract = function hiku(X2, Y2) {
+console.log(X2 - Y2);
 };
-calc.multipy = function kakeru(X3,Y3) {
- let seki = X3 * Y3; 
- console.log(seki);
+calc.multipy = function kakeru(X3, Y3) {
+ console.log(X3 * Y3);
 };
-calc.divide = function waru(X4,Y4) {
-  let syou = X4 / Y4;
-  console.log(syou);
+calc.divide = function waru(X4, Y4) {
+  console.log(X4 / Y4);
 };
 
-calc.add(5,2);
-calc.subtract(20,10);
-calc.multipy(7,7);
-calc.divide(25,5);
+calc.add(5, 2);
+calc.subtract(20, 10);
+calc.multipy(7, 7);
+calc.divide(25, 5);
 
 //--Q9--
 
-function remainder(X,Y){
+function remainder(X, Y) {
  let amari = X % Y;
  return amari;
 }
 X = 5;
 Y = 3;
-console.log( X + 'を' + Y + 'で割った余りは' + remainder(X,Y) + 'です。');
+console.log( X + 'を' + Y + 'で割った余りは' + remainder(X, Y) + 'です。');
 
 //--Q10--
 
@@ -121,6 +113,7 @@ console.log( X + 'を' + Y + 'で割った余りは' + remainder(X,Y) + 'です�
 // 変数Xが定義されていない理由
 
 // 関数の中で定義したスコープは、定義した関数の中からしか参照することができないから。
+// スコープ内でしか参照できない変数をローカル変数という。
 // 上記の場合はconsole.log(x);を波カッコの中に入れることによりエラーは起きない。
 
 // スコープ＝変数の有効範囲
@@ -128,23 +121,23 @@ console.log( X + 'を' + Y + 'で割った余りは' + remainder(X,Y) + 'です�
 
 // 応用問題--Q1--
 
-let random = Math.floor( Math.random() * 11 );
+let random = Math.floor( Math.random() * 10 );
 console.log(random);
 
 // --Q2--
 
-let alertmsg = function(){
+let alertmsg = function() {
   console.log('Hello World!')
 }
-setTimeout(alertmsg,3000)
+setTimeout(alertmsg, 3000);
 
 // --Q3--
 
 let num = 7;
-if (num>0) {
+if (num > 0) {
  console.log('num is greater than 0');
 }
-else if (num<0) {
+else if (num < 0) {
  console.log('num is less than 0');
 }
 else {
@@ -153,15 +146,17 @@ else {
 
 // --Q4--
 
-for (let number = 0; number < 100; number++) {
-  console.log(number);
+let numbers = [];
+for (let i = 0; i < 100; i++) {
+  numbers[i] = i;
 }
+console.log(numbers);
 
 // --Q5--
 
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 
-for(i = 0; i < mixed.length; i++){
+for(i = 0; i < mixed.length; i++) {
   if (typeof mixed[i] === 'string') {
   console.log('not number');
   }
