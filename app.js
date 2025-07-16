@@ -75,17 +75,17 @@ user.sayHello();
 
 let calc = {};
 
-calc.add = function tasu(X1, Y1) {
- console.log(X1 + Y1);
+calc.add = function tasu(x1, y1) {
+ console.log(x1 + y1);
 }
-calc.subtract = function hiku(X2, Y2) {
-console.log(X2 - Y2);
+calc.subtract = function hiku(x2, y2) {
+console.log(x2 - y2);
 };
-calc.multipy = function kakeru(X3, Y3) {
- console.log(X3 * Y3);
+calc.multipy = function kakeru(x3, y3) {
+ console.log(x3 * y3);
 };
-calc.divide = function waru(X4, Y4) {
-  console.log(X4 / Y4);
+calc.divide = function waru(x4, y4) {
+  console.log(x4 / y4);
 };
 
 calc.add(5, 2);
@@ -129,6 +129,10 @@ console.log(random);
 let alertmsg = function() {
   console.log('Hello World!')
 }
+
+// function alertmsg () {
+//   console.log('Hello World!')
+// }
 setTimeout(alertmsg, 3000);
 
 // --Q3--
